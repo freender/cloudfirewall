@@ -14,7 +14,7 @@ def get_current_ip():
             logging.error(f"{result}: Response text: {response.text}")
             return None
         data = response.json()
-        logging.warning(f"Current IP:  {data['ip']}" )
+        #logging.warning(f"Current IP:  {data['ip']}" )
         return data['ip'] if 'ip' in data else None
     except Exception as e:
         logging.error(f"Error fetching IP address: {e}")
